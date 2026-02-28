@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --forest-900: #14532d;
+    --ember-500: #f97316;
+  }
+
+  body {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    @apply text-gray-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ember-500 hover:bg-ember-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-forest-800 hover:bg-forest-900 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-forest-800 text-forest-800 hover:bg-forest-800 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-forest-500 focus:border-transparent outline-none transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #14532d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #166534;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
