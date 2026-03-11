@@ -21,6 +21,7 @@ const AdminDashboard = () => {
     category: '', stock: '', sku: '', isFeatured: false, shortDescription: '',
     images: [],
   });
+  const [uploading, setUploading] = useState(false);
 
   const loadData = async () => {
     setLoading(true);
@@ -93,26 +94,82 @@ const AdminDashboard = () => {
     const files = Array.from(e.target.files);
     if (files.length === 0) return;
 
+    console.log('Starting image upload:', {
+      fileCount: files.length,
+      files: files.map(f => ({ name: f.name, type: f.type, size: f.size }))
+    });
+
+    // Validate file types and sizes
+    const validFiles = files.filter(file => {
+      const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      
+      if (!validTypes.includes(file.type)) {
+        toast.error(`${file.name} is not a valid image format`);
+        return false;
+      }
+      
+      if (file.size > maxSize) {
+        toast.error(`${file.name} is too large. Maximum size is 5MB`);
+        return false;
+      }
+      
+      return true;
+    });
+
+    if (validFiles.length === 0) return;
+
+    setUploading(true);
+    
     try {
       const formData = new FormData();
-      files.forEach((file) => formData.append('images', file));
+      validFiles.forEach((file) => formData.append('images', file));
       
-      const { data } = await uploadAPI.upload(formData);
+      console.log('Sending upload request with FormData:', {
+        files: validFiles.map(f => f.name),
+        formDataEntries: Array.from(formData.entries())
+      });
       
-      const newImages = data.data.map((img) => ({
+      const response = await uploadAPI.upload(formData);
+      console.log('Upload response:', response);
+      
+      // Fix: Access images from data.data (backend returns { success: true, data: images })
+      const newImages = response.data.data.map((img) => ({
         url: img.url,
         publicId: img.publicId,
         alt: productForm.name || 'Product image',
       }));
+      
+      console.log('Processed images:', newImages);
       
       setProductForm((f) => ({
         ...f,
         images: [...f.images, ...newImages],
       }));
       
-      toast.success('Image(s) uploaded!');
+      toast.success(`${newImages.length} image(s) uploaded successfully!`);
     } catch (err) {
-      toast.error('Failed to upload image');
+      console.error('Upload error details:', {
+        error: err,
+        message: err.message,
+        response: err.response,
+        status: err.response?.status,
+        data: err.response?.data
+      });
+      
+      if (err.response?.status === 401) {
+        toast.error('Authentication failed. Please log in again.');
+      } else if (err.response?.status === 403) {
+        toast.error('Access denied. Admin privileges required.');
+      } else if (err.response?.status === 500) {
+        toast.error('Server error. Please check console for details.');
+      } else if (err.response?.data?.message) {
+        toast.error(err.response.data.message);
+      } else {
+        toast.error('Failed to upload image(s). Please check console for details.');
+      }
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -365,12 +422,31 @@ const AdminDashboard = () => {
               {/* Images */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Product Images</label>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-forest-500 transition-colors">
-                  <input type="file" accept="image/*" multiple onChange={handleImageUpload} className="hidden" id="image-upload" />
+                <div className={`border-2 border-dashed rounded-lg p-4 text-center transition-colors ${
+                  uploading 
+                    ? 'border-forest-500 bg-forest-50' 
+                    : 'border-gray-300 hover:border-forest-500'
+                }`}>
+                  <input 
+                    type="file" 
+                    accept="image/*" 
+                    multiple 
+                    onChange={handleImageUpload} 
+                    className="hidden" 
+                    id="image-upload" 
+                    disabled={uploading}
+                  />
                   <label htmlFor="image-upload" className="cursor-pointer">
                     <div className="text-4xl mb-2">📷</div>
-                    <p className="text-sm text-gray-600">Click to upload images</p>
-                    <p className="text-xs text-gray-400">PNG, JPG up to 5MB each</p>
+                    <p className="text-sm text-gray-600">
+                      {uploading ? 'Uploading images...' : 'Click to upload images'}
+                    </p>
+                    <p className="text-xs text-gray-400">PNG, JPG, WebP up to 5MB each</p>
+                    {uploading && (
+                      <div className="mt-2">
+                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-forest-600 mx-auto"></div>
+                      </div>
+                    )}
                   </label>
                 </div>
                 {productForm.images.length > 0 && (
