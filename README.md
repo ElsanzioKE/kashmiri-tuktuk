@@ -31,11 +31,6 @@ cd backend && npm run seed
 
 Access at http://localhost:5173
 
-## Test Accounts
-
-- Admin: admin@kashmirituktuk.com / admin123456
-- Customer: customer@test.com / customer123
-
 ## Key Features
 
 - Product catalog with search, filter, sort
