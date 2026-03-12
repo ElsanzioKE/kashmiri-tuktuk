@@ -13,7 +13,6 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'kashmiri-tuktuk',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
-    transformation: [{ width: 800, height: 800, crop: 'limit' }],
   },
 });
 

@@ -32,7 +32,7 @@ const ProductCard = ({ product }) => {
         <img
           src={imgUrl}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           onError={(e) => { e.target.src = `https://placehold.co/400x300/14532d/white?text=No+Image`; }}
         />
         {discount > 0 && (

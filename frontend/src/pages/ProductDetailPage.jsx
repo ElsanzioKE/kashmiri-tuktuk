@@ -102,7 +102,7 @@ const ProductDetailPage = () => {
             <img
               src={images[activeImage]?.url}
               alt={images[activeImage]?.alt || product.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               onError={(e) => { e.target.src = 'https://placehold.co/600x600/14532d/white?text=No+Image'; }}
             />
           </div>
@@ -114,7 +114,7 @@ const ProductDetailPage = () => {
                   onClick={() => setActiveImage(i)}
                   className={`w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-colors ${activeImage === i ? 'border-forest-700' : 'border-gray-200'}`}
                 >
-                  <img src={img.url} alt="" className="w-full h-full object-cover" />
+                  <img src={img.url} alt="" className="w-full h-full object-contain" />
                 </button>
               ))}
             </div>
