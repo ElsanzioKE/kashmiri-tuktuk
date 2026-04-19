@@ -68,7 +68,7 @@ export const LoginPage = () => {
           </form>
 
           <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-700">
-            <strong>Demo:</strong> admin@kashmirituktuk.com / admin123456
+            <strong>Demo:</strong> mohammedhaseeb@gmail.com / admin123456
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-6">
@@ -126,7 +126,7 @@ export const RegisterPage = () => {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-              <input type="tel" value={form.phone} onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))} className="input-field" placeholder="+91 XXXXXXXXXX (optional)" />
+              <input type="tel" value={form.phone} onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))} className="input-field" placeholder="+254 XXXXXXXXX (optional)" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>

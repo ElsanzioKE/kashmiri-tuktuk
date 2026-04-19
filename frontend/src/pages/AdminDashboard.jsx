@@ -27,9 +27,9 @@ const AdminDashboard = () => {
     setLoading(true);
     try {
       const [prodRes, catRes, ordRes] = await Promise.all([
-        productAPI.getAll({ limit: 50 }),
+        productAPI.getAll({ limit: 1000 }),
         categoryAPI.getAll(),
-        orderAPI.getAll({ limit: 50 }),
+        orderAPI.getAll({ limit: 1000 }),
       ]);
       setProducts(prodRes.data.data);
       setCategories(catRes.data.data);

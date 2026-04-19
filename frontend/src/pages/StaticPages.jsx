@@ -135,9 +135,9 @@ export const ContactPage = () => {
               <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '📍', title: 'Mombasa Office', info: 'Mombasa Road, Mombasa\nKenya' },
-                  { icon: '📞', title: 'Phone / WhatsApp', info: '+254 712 345 678\n+254 733 999 888' },
-                  { icon: '✉️', title: 'Email', info: 'info@kashmirituktuk.com\nsales@kashmirituktuk.com' },
+                  { icon: '📍', title: 'Mombasa Office', info: 'Manyimbo Road, Tudor\nMombasa, Kenya' },
+                  { icon: '📞', title: 'Phone / WhatsApp', info: '+254 733 282 512' },
+                  { icon: '✉️', title: 'Email', info: 'mohammedhaseeb@gmail.com' },
                   { icon: '🕒', title: 'Business Hours', info: 'Monday–Saturday: 8:00 AM – 6:00 PM EAT\nSunday: 9:00 AM – 1:00 PM EAT' },
                 ].map(({ icon, title, info }) => (
                   <div key={title} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
@@ -155,7 +155,7 @@ export const ContactPage = () => {
             <div className="bg-ember-50 border border-ember-200 rounded-xl p-5">
               <h3 className="font-semibold text-ember-800 mb-2">🌍 East Africa Inquiries</h3>
               <p className="text-ember-700 text-sm leading-relaxed">
-                For bulk orders and business inquiries from Kenya, Tanzania, Uganda, Ethiopia and Rwanda, please email us at <strong>africa@kashmirituktuk.com</strong> or WhatsApp +254 XXX XXX XXX.
+                For bulk orders and business inquiries from Kenya, Tanzania, Uganda, Ethiopia and Rwanda, please email us at <strong>mohammedhaseeb@gmail.com</strong> or WhatsApp +254 733 282 512.
               </p>
             </div>
           </div>

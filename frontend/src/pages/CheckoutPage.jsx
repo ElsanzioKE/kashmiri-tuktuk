@@ -129,8 +129,8 @@ const CheckoutPage = () => {
                 <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700">
                   <strong>Bank Details:</strong><br />
                   Account: Kashmiri TukTuk Spare Parts<br />
-                  Bank: Kenyan Bank | A/C: XXXX XXXX<br />
-                  SWIFT: KCBLKEN
+                  Bank: Kenyan Bank<br />
+                  Contact: +254 733 282 512 for account details
                 </div>
               )}
             </div>

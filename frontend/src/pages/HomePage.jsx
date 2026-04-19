@@ -44,14 +44,20 @@ const HomePage = () => {
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200)' }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <div className="inline-flex items-center bg-ember-500/20 border border-ember-500/30 rounded-full px-4 py-1.5 mb-6">
               <span className="text-ember-400 text-sm font-medium">Mombasa's Most Trusted TukTuk Parts Store</span>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+            <div className="mb-6">
+              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-ember-400 mb-2">
+                Kashmiri TukTuk
+              </h1>
+              <p className="text-2xl md:text-3xl font-semibold text-white/90">Spare Parts</p>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
               Quality Parts for Every{' '}
               <span className="text-ember-400">TukTuk</span>
-            </h1>
+            </h2>
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed">
               Genuine spare parts for Bajaj, TVS, Piaggio and all major TukTuk brands. Serving Mombasa and East Africa with fast shipping and unbeatable prices.
             </p>
