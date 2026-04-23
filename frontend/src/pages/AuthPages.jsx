@@ -68,7 +68,7 @@ export const LoginPage = () => {
           </form>
 
           <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-700">
-            <strong>Demo:</strong> mohammedhaseeb@gmail.com / admin123456
+            <strong>Demo:</strong> mohaseeb@gmail.com / admin123456
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-6">

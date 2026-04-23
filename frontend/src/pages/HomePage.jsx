@@ -59,7 +59,7 @@ const HomePage = () => {
               <span className="text-ember-400">TukTuk</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed">
-              Genuine spare parts for Bajaj, TVS, Piaggio and all major TukTuk brands. Serving Mombasa and East Africa with fast shipping and unbeatable prices.
+              Genuine spare parts for Bajaj, TVS, Piaggio and all major TukTuk brands. Supplies done in Mombasa, Kenya. Serving East Africa with fast shipping and unbeatable prices.
             </p>
 
             {/* Search Bar */}

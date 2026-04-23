@@ -137,7 +137,7 @@ export const ContactPage = () => {
                 {[
                   { icon: '📍', title: 'Mombasa Office', info: 'Manyimbo Road, Tudor\nMombasa, Kenya' },
                   { icon: '📞', title: 'Phone / WhatsApp', info: '+254 733 282 512' },
-                  { icon: '✉️', title: 'Email', info: 'mohammedhaseeb@gmail.com' },
+                  { icon: '✉️', title: 'Email', info: 'mohaseeb@gmail.com' },
                   { icon: '🕒', title: 'Business Hours', info: 'Monday–Saturday: 8:00 AM – 6:00 PM EAT\nSunday: 9:00 AM – 1:00 PM EAT' },
                 ].map(({ icon, title, info }) => (
                   <div key={title} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
@@ -155,7 +155,7 @@ export const ContactPage = () => {
             <div className="bg-ember-50 border border-ember-200 rounded-xl p-5">
               <h3 className="font-semibold text-ember-800 mb-2">🌍 East Africa Inquiries</h3>
               <p className="text-ember-700 text-sm leading-relaxed">
-                For bulk orders and business inquiries from Kenya, Tanzania, Uganda, Ethiopia and Rwanda, please email us at <strong>mohammedhaseeb@gmail.com</strong> or WhatsApp +254 733 282 512.
+                For bulk orders and business inquiries from Kenya, Tanzania, Uganda, Ethiopia and Rwanda, please email us at <strong>mohaseeb@gmail.com</strong> or WhatsApp +254 733 282 512.
               </p>
             </div>
           </div>
