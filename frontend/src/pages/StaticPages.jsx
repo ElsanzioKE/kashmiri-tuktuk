@@ -8,7 +8,7 @@ export const AboutPage = () => (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="font-display text-4xl font-bold mb-4">About Kashmiri TukTuk Spare Parts</h1>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-          Mombasa's most trusted supplier of genuine TukTuk spare parts, serving local operators and East African markets since 2008.
+          Mombasa's most trusted supplier of genuine TukTuk spare parts, serving local operators and Kenyan markets since 2008.
         </p>
       </div>
     </div>
@@ -19,7 +19,7 @@ export const AboutPage = () => (
         <div>
           <h2 className="font-display text-3xl font-bold text-forest-900 mb-4">Our Story</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Founded in 2008 in the heart of Mombasa, Kashmiri TukTuk Spare Parts began as a small workshop serving local auto-rickshaw operators. Over the years, we've grown into a comprehensive parts supplier serving thousands of TukTuk owners across Kenya and East Africa.
+            Founded in 2016 in the heart of Mombasa, Kashmiri TukTuk Spare Parts began as a small workshop serving local auto-rickshaw operators. Over the years, we've grown into a comprehensive parts supplier serving thousands of TukTuk owners across Kenya and East Africa.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Our deep understanding of the unique terrain and conditions in the region allows us to stock parts that truly meet operator needs — from the coastal roads of Mombasa to the bustling city streets of Nairobi and Dar es Salaam.
@@ -41,7 +41,7 @@ export const AboutPage = () => (
       <div className="bg-forest-900 text-white rounded-2xl p-10 text-center mb-16">
         <h2 className="font-display text-2xl font-bold mb-4">Our Mission</h2>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-          To keep every TukTuk on the road by providing genuine, affordable spare parts with fast delivery and expert technical support — empowering operators across Kenya and East Africa.
+          To keep every TukTuk on the road by providing genuine, affordable spare parts with fast delivery and expert technical support — empowering operators across Kenya.
         </p>
       </div>
 
@@ -155,7 +155,7 @@ export const ContactPage = () => {
             <div className="bg-ember-50 border border-ember-200 rounded-xl p-5">
               <h3 className="font-semibold text-ember-800 mb-2">🌍 East Africa Inquiries</h3>
               <p className="text-ember-700 text-sm leading-relaxed">
-                For bulk orders and business inquiries from Kenya, Tanzania, Uganda, Ethiopia and Rwanda, please email us at <strong>mohaseeb@gmail.com</strong> or WhatsApp +254 733 282 512.
+                For bulk orders and business inquiries from Kenya <strong>mohaseeb@gmail.com</strong> or WhatsApp +254 733 282 512.
               </p>
             </div>
           </div>

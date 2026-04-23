@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Trusted supplier of quality TukTuk spare parts for Kashmir and East Africa. Bajaj, TVS, Piaggio and more.
+              Trusted supplier of quality TukTuk spare parts for Kenya. Bajaj, TVS, Piaggio and more.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const Footer = () => {
 
         <div className="border-t border-forest-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
           <p>© 2024 Kashmiri TukTuk Spare Parts. All rights reserved.</p>
-          <p className="mt-2 sm:mt-0">Serving Kashmir & East Africa</p>
+          <p className="mt-2 sm:mt-0">Serving Mombasa, Kenya.</p>
         </div>
       </div>
     </footer>
